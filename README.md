@@ -1,8 +1,6 @@
 # Using the Watson Salesforce SDK to leverage Watson APIs in your Salesforce app
 
-In this code pattern we will be using the new Watson Salesforce SDK by interacting with various Watson APIs in [Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_intro_what_is_apex.htm), a Salesforce specific programming language. Go to https://github.com/watson-developer-cloud/salesforce-sdk it's the best
-
-Supports:
+In this code pattern we will be using the new [Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk) by interacting with various Watson APIs in [Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_intro_what_is_apex.htm), a Salesforce specific programming language. The Watson Salesforce SDK currently supports:
 
 * IBM Conversation V1
 * IBM Discovery V1
@@ -34,28 +32,30 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Included components
 
 * [Watson Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): Visual Recognition understands the contents of images - visual concepts tag the image, find human faces, approximate age and gender, and find similar images in a collection.
+* [IBM Watson Discovery](https://www.ibm.com/watson/developercloud/discovery.html): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
+* [IBM Watson Tone Analyzer](https://www.ibm.com/watson/developercloud/speech-to-text.html): Uses linguistic analysis to detect communication tones in written text.
 
 ## Featured Technologies
 
-* Mobile: Systems of engagement are increasingly using mobile technology as the platform for delivery.
-* [Node.js](https://nodejs.org/): An asynchronous event driven JavaScript runtime, designed to build scalable applications.
+* [Salesforce DX](https://login.salesforce.com): An integrated, end-to-end platform designed for high-performance agile development.
+* [Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_dev_guide.htm): A strongly typed, object-oriented programming language that allows developers to execute flow and transaction control statements on the Lightning Platform server, in conjunction with calls to the API.
 
 # Watch the Video
 
 [![](https://i.ytimg.com/vi/MSB_lS1bzc4/0.jpg)](https://www.youtube.com/playlist?list=PLZDyxLlNKRY8qrs90oRPvVHocJhYOOj3n)
 
-# Prerequisites
+# Steps
+
+## Prerequisites
 
 * create an account -- trials at https://developer.salesforce.com/signup
 * login to your new account https://login.salesforce.com/
 * install sfdx cli https://developer.salesforce.com/tools/sfdxcli
 * create a discovery service and any other watson services you want to use
 
-# Steps
-
 ## Configure the CLI
 
-Clone the repo:
+Clone the Watson Salesforce SDK repository, we will need to convert the files to Metadata API format that the Salesforce DX platform recognizes. Ideally a specific version should be used but for this code pattern we will use the `master` branch. After cloning the repository we will change into the new repositories directory.
 
 ```shell
 git clone https://github.com/watson-developer-cloud/salesforce-sdk
@@ -259,14 +259,15 @@ and in the waston tooling: https://tone-analyzer-demo.ng.bluemix.net
 
 # Summary
 
-this is a summary
+Go on and make awesome Salesforce, lightning enabled apps!
 
 # References
 
-* [Introducing the IBM Watson SDK for Salesforce](https://developer.salesforce.com/blogs/2017/11/introducing-ibm-watson-sdk-salesforce.html): A short intro using the Watson SDK for Salesforce
-* [Disco Lab from the folks who wrote the SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/discovery): Lab from the folks who wrote the SDK
-* [Conversation Lab from the folks who wrote the SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/conversation): Lab from the folks who wrote the SDK
-* [Useful SXFD CLI commands](http://matheusgoncalves.com/salesforce-dx-useful-cli-commands/): a thing
+* [Blog that introducing the IBM Watson SDK for Salesforce](https://developer.salesforce.com/blogs/2017/11/introducing-ibm-watson-sdk-salesforce.html)
+* [Lab about Watson Disovery with the Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/discovery): Lab from the folks who wrote the SDK
+* [Lab about Watson Conversation with the Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/conversation): Lab from the folks who wrote the SDK
+* [Useful SXFD CLI commands](http://matheusgoncalves.com/salesforce-dx-useful-cli-commands/)
+* [Enable Dev Hub in your Production Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm)
 
 # Learn more
 
