@@ -26,10 +26,10 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ![](images/architecture.png)
 
-1. User logs into the Salesforce platform and brings up the Dev Console.
-2. Write Apex code into the Dev Console using the Watson Salesforce SDK.
+1. User logs into the Salesforce platform and brings up the Developer Console.
+2. Write Apex code into the Developer Console using the Watson Salesforce SDK.
 3. Execute the Apex code that calls the Watson APIs.
-4. The Watson API results are returned to the Salesforce Dev Console debugger
+4. The Watson API results are returned to the Salesforce Developer Console debugger.
 
 ## Included components
 
@@ -53,19 +53,18 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Steps
 
-
 ## Configure the CLI
 
 Clone the repo:
 
-```
+```shell
 git clone https://github.com/watson-developer-cloud/salesforce-sdk
 cd salesforce-sdk
 ```
 
 new flow!
 
-```
+```shell
 $ sfdx force:auth:web:login -s
 Successfully authorized myemail@gmail.com with org ID 00D6A000001izOFUAY
 You may now close the browser
@@ -73,14 +72,14 @@ You may now close the browser
 
 then this!
 
-```
+```shell
 $ sfdx force:source:convert -d mdapioutput
 Source was successfully converted to Metadata API format and written to the location: /Users/stevemar/workspace/salesforce-sdk/mdapioutput
 ```
 
 then this!
 
-```
+```shell
 $ sfdx force:mdapi:deploy -d mdapioutput/ -w 100
 289718 bytes written to /var/folders/2j/fjvydk2x1rs3rdy99m6hcw2r0000gn/T/mdapioutput.zip using 202.997ms
 Deploying /var/folders/2j/fjvydk2x1rs3rdy99m6hcw2r0000gn/T/mdapioutput.zip...
@@ -150,13 +149,12 @@ Check only: false
 
 This command lists your orgs, you need one for reasons
 
-```
+```shell
 $ sfdx force:org:list
      ALIAS   USERNAME           ORG ID              CONNECTED STATUS
 ───  ──────  ─────────────────  ──────────────────  ────────────────
 (D)  DevHub  myemail@gmail.com  00D0Y000001LvYSUA0  Connected
 ```
-
 
 one... more thing! allow remote calls..
 
@@ -178,7 +176,7 @@ Now we switch to dev hub by going to https://login.salesforce.com/ and clicking 
 Now let's do something with Discovery
 
 
-```
+```java
 IBMDiscoveryV1 discovery = new IBMDiscoveryV1(IBMDiscoveryV1.VERSION_DATE_2017_09_01);
 String username = '6f7be0c0-xxxxxxxxxx-1d5e9eb4050c';
 String password = 'xxxxxxxxxx';
@@ -206,7 +204,7 @@ and in the waton tooling...
 
 Now let's do something with VizRec
 
-```
+```java
 String service_url = 'https://gateway-a.watsonplatform.net/visual-recognition/api/';
 String api_key = '76150a9f51a4a3fxxxxxxxxxx77a05b08246e9f';
 IBMVisualRecognitionV3 visualRecognition = new IBMVisualRecognitionV3(IBMVisualRecognitionV3.VERSION_DATE_2016_05_20, api_key);
@@ -232,7 +230,7 @@ and in the waston tooling: https://visual-recognition-demo.ng.bluemix.net/
 Now let's do something with Tone Analyzer --> https://console.bluemix.net/services/tone_analyzer/
 
 
-```
+```java
 String service_url = 'https://gateway.watsonplatform.net/tone-analyzer/api';
 String username = '3baf41e5-xxxxxxxxxx-5eb5e9b5a79b';
 String password = 'xxxxxxxxxx';
