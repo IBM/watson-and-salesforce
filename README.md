@@ -1,8 +1,6 @@
 # Using the Watson Salesforce SDK to leverage Watson APIs in your Salesforce app
 
-Salesforce is awesome, so is Watson, let's use them together.
-
-Go to https://github.com/watson-developer-cloud/salesforce-sdk it's the best
+In this code pattern we will be using the new Watson Salesforce SDK by interacting with various Watson APIs in [Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_intro_what_is_apex.htm), a Salesforce specific programming language. Go to https://github.com/watson-developer-cloud/salesforce-sdk it's the best
 
 Supports:
 
@@ -17,25 +15,46 @@ Supports:
 * IBM Tone Analyzer V3
 * IBM Visual Recognition V3
 
-## Learning objectives
+When the reader has completed this Code Pattern, they will understand how to:
 
-Learn the basics of how to use the watson salesforce-sdk.
+* Create a Salesforce account.
+* Install the Watson Salesforce SDK.
+* Use the Watson Salesforce SDK to make calls to Watson Visual Recognition, Watson Discovery, and Watson Tone Analyzer APIs.
+* Use the Lightning UI debugger to view the results of the APIs.
 
-## Prerequisites
+## Flow
+
+![](images/architecture.png)
+
+1. User logs into the Salesforce platform and brings up the Dev Console.
+2. Write Apex code into the Dev Console using the Watson Salesforce SDK.
+3. Execute the Apex code that calls the Watson APIs.
+4. The Watson API results are returned to the Salesforce Dev Console debugger
+
+## Included components
+
+* [Watson Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): Visual Recognition understands the contents of images - visual concepts tag the image, find human faces, approximate age and gender, and find similar images in a collection.
+
+## Featured Technologies
+
+* Mobile: Systems of engagement are increasingly using mobile technology as the platform for delivery.
+* [Node.js](https://nodejs.org/): An asynchronous event driven JavaScript runtime, designed to build scalable applications.
+
+# Watch the Video
+
+[![](https://i.ytimg.com/vi/MSB_lS1bzc4/0.jpg)](https://www.youtube.com/playlist?list=PLZDyxLlNKRY8qrs90oRPvVHocJhYOOj3n)
+
+# Prerequisites
 
 * create an account -- trials at https://developer.salesforce.com/signup
 * login to your new account https://login.salesforce.com/
 * install sfdx cli https://developer.salesforce.com/tools/sfdxcli
 * create a discovery service and any other watson services you want to use
 
-## Estimated time
-
-2 hours
-
-## Steps
+# Steps
 
 
-### Configure the CLI
+## Configure the CLI
 
 Clone the repo:
 
@@ -143,14 +162,20 @@ one... more thing! allow remote calls..
 
 https://na50.lightning.force.com/one/one.app#/setup/SecurityRemoteProxy/home
 
+![](images/sf-remote-site1.png)
+![](images/sf-remote-site2.png)
+![](images/sf-remote-sites-all.png)
 
-### Run a few SDK commands
+
+## Run a few SDK commands
 
 Now we switch to dev hub by going to https://login.salesforce.com/ and clicking on the mystery icon
 
 ![](images/dev_console.png)
 
-Run one or two watson commands:
+### Watson Discovery
+
+Now let's do something with Discovery
 
 
 ```
@@ -171,14 +196,15 @@ IBMDiscoveryV1Models.QueryResponse response = discovery.query(options);
 System.debug(response);
 ```
 
-![](images/disco-ui.png)
+![](images/sf-disco-results.png)
 
-we can see it in the sf ui, too
+and in the waton tooling...
 
-![](images/disco-sf.png)
+![](images/watson-disco-results.png)
 
+### Watson Visual Recognition
 
-here's a watson visual recognition one:
+Now let's do something with VizRec
 
 ```
 String service_url = 'https://gateway-a.watsonplatform.net/visual-recognition/api/';
@@ -194,15 +220,16 @@ IBMVisualRecognitionV3Models.ClassifiedImages resp = visualRecognition.classify(
 System.debug('IBMVisualRecognitionV3FTest.testClassify(): ' + resp);
 ```
 
-reference the live demo: https://visual-recognition-demo.ng.bluemix.net/
+![](images/sf-vr-results.png)
 
-add picture
+and in the waston tooling: https://visual-recognition-demo.ng.bluemix.net/
 
 
+![](images/watson-vr-results.png)
 
-here's a tone analyzer example: 
+### Watson Tone Analyzer
 
-https://console.bluemix.net/services/tone_analyzer/
+Now let's do something with Tone Analyzer --> https://console.bluemix.net/services/tone_analyzer/
 
 
 ```
@@ -226,22 +253,29 @@ IBMToneAnalyzerV3Models.ToneAnalysis resp = toneAnalyzer.tone(options);
 System.debug('IBMToneAnalyzerV3FTest.testTone(): ' + resp);
 ```
 
-add picture
+![](images/sf-tone-results.png)
 
-add reference to demo tooling
+and in the waston tooling: https://tone-analyzer-demo.ng.bluemix.net
 
-https://tone-analyzer-demo.ng.bluemix.net
+![](images/watson-tone-results.png)
 
+# Summary
 
+this is a summary
 
-
-#### Summary
-
-Salesforce is awesome, so is Watson, let's use them together.
-
-#### References
+# References
 
 * [Introducing the IBM Watson SDK for Salesforce](https://developer.salesforce.com/blogs/2017/11/introducing-ibm-watson-sdk-salesforce.html): A short intro using the Watson SDK for Salesforce
 * [Disco Lab from the folks who wrote the SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/discovery): Lab from the folks who wrote the SDK
 * [Conversation Lab from the folks who wrote the SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/conversation): Lab from the folks who wrote the SDK
 * [Useful SXFD CLI commands](http://matheusgoncalves.com/salesforce-dx-useful-cli-commands/): a thing
+
+# Learn more
+
+* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/code/technologies/artificial-intelligence/).
+* **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
+* **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
+
+# License
+
+[Apache 2.0](LICENSE)
