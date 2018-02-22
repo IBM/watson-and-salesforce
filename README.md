@@ -42,7 +42,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Watch the Video
 
-[![](https://i.ytimg.com/vi/MSB_lS1bzc4/0.jpg)](https://www.youtube.com/playlist?list=PLZDyxLlNKRY8qrs90oRPvVHocJhYOOj3n)
+[![](https://i.ytimg.com/vi/MyNiHnVgZ1s/0.jpg)](https://www.youtube.com/watch?v=MyNiHnVgZ1s)
 
 # Steps
 
