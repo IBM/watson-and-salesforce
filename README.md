@@ -53,9 +53,9 @@ When the reader has completed this code pattern, they will understand how to:
 * Install the [SFDX CLI](https://developer.salesforce.com/tools/sfdxcli).
 * Sign up for [IBM Cloud](https://console.bluemix.net).
 * Provision a few Watson services. (*Click the links below to directly provision an instance*):
-  * [Watson Discovery](https://console.bluemix.net/services/discovery)
-  * [Watson Visual Recognition](https://console.bluemix.net/services/visual-recognition)
-  * [Watson Tone Analyzer](https://console.bluemix.net/services/tone_analyzer/)
+  * [Watson Discovery](https://console.bluemix.net/catalog/services/discovery)
+  * [Watson Visual Recognition](https://console.bluemix.net/catalog/services/visual-recognition)
+  * [Watson Tone Analyzer](https://console.bluemix.net/catalog/services/tone-analyzer/)
 
 ## Configure the SFDX CLI
 
