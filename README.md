@@ -302,7 +302,7 @@ To keep ourselves honest we can try the same image with a free online demo of Wa
 
 Congratulations! Now go on and make awesome Salesforce apps that use IBM Watson APIs! We hope that the new SDK will make it easy to integrate Watson into your Salesforce apps by offering a simple, consistent interface.
 
-If you're interested in exploring further or would like some resources to reference in the future see the [References](#References) section below.
+If you're interested in exploring further or would like some resources to reference in the future see the [References](#references) section below.
 
 # References
 
