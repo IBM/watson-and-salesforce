@@ -306,9 +306,23 @@ If you're interested in exploring further or would like some resources to refere
 
 # References
 
-* [Blog introducing the IBM Watson SDK for Salesforce](https://developer.salesforce.com/blogs/2017/11/introducing-ibm-watson-sdk-salesforce.html)
+* [The Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk)
+* [Recording of Dreamforce presentation speaking about IBM & Salesforce partnership, Watson & Einstein and the SDK](https://www.salesforce.com/video/1770876)
+* [Watson Salesforce SDK Walkthrough Videos](https://www.youtube.com/playlist?list=PLZDyxLlNKRY8qrs90oRPvVHocJhYOOj3n)
+
+### Labs
 * [Lab about Watson Disovery with the Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/discovery)
 * [Lab about Watson Conversation with the Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/conversation)
+
+### Blogs
+* [SDK Announcement](https://developer.ibm.com/dwblog/2017/watson-apex-sdk-salesforce-applications/)
+* [SDK Extended Support](https://developer.ibm.com/dwblog/2018/watson-salesforce-sdk-apis-apex-applications/)
+* [SDK Business Value](https://developer.ibm.com/dwblog/2018/watson-salesforce-sdk-details/)
+* [SDK & Discovery example](https://developer.ibm.com/dwblog/2017/watson-discovery-apex-sdk-salesforce/)
+* [SDK & Conversation example](https://developer.ibm.com/dwblog/2017/watson-conversation-apex-sdk-salesforce/)
+* [Introducing the IBM Watson SDK for Salesforce](https://developer.salesforce.com/blogs/2017/11/introducing-ibm-watson-sdk-salesforce.html)
+
+### Troubleshooting Salesforce
 * [Useful SXFD CLI commands](http://matheusgoncalves.com/salesforce-dx-useful-cli-commands/)
 * [How to enable Dev Hub in your production Salesforce org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm)
 
