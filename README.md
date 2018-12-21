@@ -51,11 +51,11 @@ When the reader has completed this code pattern, they will understand how to:
 * Sign up for a [Salesforce DX trial](https://developer.salesforce.com/signup).
 * Log into your [Salesforce DX account](https://login.salesforce.com).
 * Install the [SFDX CLI](https://developer.salesforce.com/tools/sfdxcli).
-* Sign up for [IBM Cloud](https://console.bluemix.net).
+* Sign up for [IBM Cloud](https://cloud.ibm.com).
 * Provision a few Watson services. (*Click the links below to directly provision an instance*):
-  * [Watson Discovery](https://console.bluemix.net/catalog/services/discovery)
-  * [Watson Visual Recognition](https://console.bluemix.net/catalog/services/visual-recognition)
-  * [Watson Tone Analyzer](https://console.bluemix.net/catalog/services/tone-analyzer/)
+  * [Watson Discovery](https://cloud.ibm.com/catalog/services/discovery)
+  * [Watson Visual Recognition](https://cloud.ibm.com/catalog/services/visual-recognition)
+  * [Watson Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer/)
 
 ## Configure the SFDX CLI
 
