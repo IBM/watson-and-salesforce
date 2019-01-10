@@ -2,7 +2,7 @@
 
 In this code pattern we will be using the new [Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk) by interacting with various Watson APIs in [Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_intro_what_is_apex.htm), a Salesforce specific programming language. The Watson Salesforce SDK currently supports:
 
-* IBM Conversation V1
+* IBM Conversation V1 (now known as Assistant)
 * IBM Discovery V1
 * IBM Language Translator V2
 * IBM Natural Language Classifier V1
@@ -51,11 +51,11 @@ When the reader has completed this code pattern, they will understand how to:
 * Sign up for a [Salesforce DX trial](https://developer.salesforce.com/signup).
 * Log into your [Salesforce DX account](https://login.salesforce.com).
 * Install the [SFDX CLI](https://developer.salesforce.com/tools/sfdxcli).
-* Sign up for [IBM Cloud](https://console.bluemix.net).
+* Sign up for [IBM Cloud](https://cloud.ibm.com).
 * Provision a few Watson services. (*Click the links below to directly provision an instance*):
-  * [Watson Discovery](https://console.bluemix.net/catalog/services/discovery)
-  * [Watson Visual Recognition](https://console.bluemix.net/catalog/services/visual-recognition)
-  * [Watson Tone Analyzer](https://console.bluemix.net/catalog/services/tone-analyzer/)
+  * [Watson Discovery](https://cloud.ibm.com/catalog/services/discovery)
+  * [Watson Visual Recognition](https://cloud.ibm.com/catalog/services/visual-recognition)
+  * [Watson Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer/)
 
 ## Configure the SFDX CLI
 
@@ -312,7 +312,7 @@ If you're interested in exploring further or would like some resources to refere
 
 ### Labs
 * [Lab about Watson Disovery with the Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/discovery)
-* [Lab about Watson Conversation with the Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/conversation)
+* [Lab about Watson Assistant (formerly Conversation) with the Watson Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk/tree/master/examples/assistant)
 
 ### Blogs
 * [SDK Announcement](https://developer.ibm.com/dwblog/2017/watson-apex-sdk-salesforce-applications/)
@@ -323,17 +323,17 @@ If you're interested in exploring further or would like some resources to refere
 * [Introducing the IBM Watson SDK for Salesforce](https://developer.salesforce.com/blogs/2017/11/introducing-ibm-watson-sdk-salesforce.html)
 
 ### Troubleshooting Salesforce
-* [Useful SXFD CLI commands](http://matheusgoncalves.com/salesforce-dx-useful-cli-commands/)
+* [Useful SXFD CLI commands](https://matheusgoncalves.com/salesforce-dx-useful-cli-commands/)
 * [How to enable Dev Hub in your production Salesforce org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm)
 
 # Learn more
 
-* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/code/technologies/artificial-intelligence/).
+* **Artificial Intelligence Code Patterns**: Enjoyed this Code Pattern? Check out our other [AI Code Patterns](https://developer.ibm.com/technologies/artificial-intelligence/).
 * **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
 * **With Watson**: Want to take your Watson app to the next level? Looking to utilize Watson Brand assets? [Join the With Watson program](https://www.ibm.com/watson/with-watson/) to leverage exclusive brand, marketing, and tech resources to amplify and accelerate your Watson embedded commercial solution.
 
 # License
 
-This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](http://www.apache.org/licenses/LICENSE-2.0.txt).
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
-[Apache Software License (ASL) FAQ](http://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
+[Apache Software License (ASL) FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
