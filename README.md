@@ -192,7 +192,7 @@ Now we'll make a simple Watson Visual Recognition call using an image available 
 The code block below is similar to our Watson Discovery example with a few minor changes. It does the following: 1) It creates a new Watson Visual Recognition object. 2) It updates said object with the specified `api_key` value. 3) It makes a call to the Watson Visual Recognition service using an image of an apple. And 4) it logs the response as a debug content.
 
 ```java
-IBMWatsonAuthenticator authenticator = new IBMWatsonIAMAuthenticator('pS0nVDCqwU8NoQgZxRfyJclzKFYOTJmgm35L43FWEuhO');
+IBMWatsonAuthenticator authenticator = new IBMWatsonIAMAuthenticator('pS0nVDU8Nxxxxxxxxx35L4WEuhO');
 IBMVisualRecognitionV3 visualRecognition = new IBMVisualRecognitionV3('2018-03-19', authenticator);
 
 // classify an image, an apple
@@ -218,7 +218,7 @@ Alright, one last example using Watson's Tone Analyzer. Copy the code block belo
 The code block below is similar to our others examples with a few minor changes. It does the following: 1) It creates a new Watson Tone Analyzer object. 2) It updates said object with the specified `username` and `password` values. 3) It makes a call to the Watson Tone Analyzer service using the phrase *We have a better product. We need to do better selling*. And 4) it logs the response as a debug content.
 
 ```java
-IBMWatsonAuthenticator authenticator = new IBMWatsonIAMAuthenticator('t_-0vh5GImloucOiZCwCyzte3u4gXnHYV8mPu_72FjW4');
+IBMWatsonAuthenticator authenticator = new IBMWatsonIAMAuthenticator('twCyzte3u4xxxxxxxxxxx8mPu72FjW4');
 IBMToneAnalyzerV3 toneAnalyzer = new IBMToneAnalyzerV3('2017-09-21', authenticator);
 
 IBMToneAnalyzerV3Models.ToneOptions options = new IBMToneAnalyzerV3Models.ToneOptionsBuilder()
