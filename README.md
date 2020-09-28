@@ -136,7 +136,11 @@ Log into Salesforce DX by going to [https://login.salesforce.com](https://login.
 
 ![](images/dev_console.png)
 
-Now we're ready to run some code! From the *Developer Console* click the *Debug* menu and the *Open Execute Anonymous Windows* to bring up a new window that allows a user to execute Apex code. From here follow along in the sections below and click the *Execute* button. A few tips:
+Now we're ready to run some code! From the *Developer Console* click the *Debug* menu and the *Open Execute Anonymous Windows* to bring up a new window that allows a user to execute Apex code. From here follow along in the sections below and click the *Execute* button. 
+
+![](images/execute-code.png)
+
+A few tips:
 
 * Be sure to select the *Open Log* checkbox.
 * Be sure to remove any old code between the sections below.
