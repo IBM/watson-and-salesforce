@@ -115,7 +115,6 @@ There should be a single entry for making calls to the `ApexDevNet` URL `http://
 Add two new entries using the *New Remote Site* button. The `Remote Site Name` field for the entries is not important but the `Remote Site URL` fields must match the following list:
 
 * `https://gateway.watsonplatform.net`
-* `https://gateway-a.watsonplatform.net`
 * `https://api.us-south.discovery.watson.cloud.ibm.com`
 * `https://api.us-south.tone-analyzer.watson.cloud.ibm.com`
 * `https://iam.cloud.ibm.com`
