@@ -59,6 +59,8 @@ When the reader has completed this code pattern, they will understand how to:
 
 ## Configure the SFDX CLI
 
+> **NOTE**: This step can be run locally.
+
 To use the Watson Salesforce SDK we have to upload it's contents to the Salesforce DX platform. To accomplish this we first clone the repository, then convert the contents to a specific format (Metadata API) that the Salesforce DX platform uses. Then finally push the converted contents to our authenticated user session. Note, that ideally a specific version should be used when cloning the repository but for this code pattern we will use the `master` branch.
 
 First we clone the repo and change into it's directory.
@@ -86,71 +88,9 @@ Source was successfully converted to Metadata API format and written to the loca
 Lastly we use the `sfdx force:mdapi:deploy` to deploy the converted contents to our authenticatd session.
 
 ```shell
-$ sfdx force:mdapi:deploy -d mdapioutput/ -w 100
-289718 bytes written to /var/folders/2j/fjvydk2x1rs3rdy99m6hcw2r0000gn/T/mdapioutput.zip using 202.997ms
-Deploying /var/folders/2j/fjvydk2x1rs3rdy99m6hcw2r0000gn/T/mdapioutput.zip...
-
-=== Status
-Status:  Pending
-jobid:  0Af6A00000UGfRSSA1
-Component errors:  0
-Components deployed:  0
-Components total:  0
-Tests errors:  0
-Tests completed:  0
-Tests total:  0
-Check only: false
-
-
-=== Status
-Status:  InProgress
-jobid:  0Af6A00000UGfRSSA1
-Component errors:  0
-Components deployed:  0
-Components total:  53
-Tests errors:  0
-Tests completed:  0
-Tests total:  0
-Check only: false
-
-
-=== Status
-Status:  InProgress
-jobid:  0Af6A00000UGfRSSA1
-Component errors:  0
-Components deployed:  0
-Components total:  53
-Tests errors:  0
-Tests completed:  0
-Tests total:  0
-Check only: false
-
-
-=== Status
-Status:  InProgress
-jobid:  0Af6A00000UGfRSSA1
-Component errors:  0
-Components deployed:  0
-Components total:  53
-Tests errors:  0
-Tests completed:  0
-Tests total:  0
-Check only: false
-
-
-Deployment finished in 22000ms
-
-=== Result
-Status:  Succeeded
-jobid:  0Af6A00000UGfRSSA1
-Completed:  2018-02-20T19:15:47.000Z
-Component errors:  0
-Components deployed:  53
-Components total:  53
-Tests errors:  0
-Tests completed:  0
-Tests total:  0
-Check only: false
+➜  salesforce-sdk git:(master) sfdx force:mdapi:deploy -d mdapioutput/ -w 100
+Job ID | 0Af4R00000J7YZPSA3
+MDAPI PROGRESS | ████████████████████████████████████████ | 95/95 Components
 ```
 
 Though not necessary to run it is handy, especially when debugging, to view the organizations tied to a specific account using the `sfdx force:org:list` command.
