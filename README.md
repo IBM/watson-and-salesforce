@@ -116,16 +116,15 @@ Add two new entries using the *New Remote Site* button. The `Remote Site Name` f
 
 * `https://gateway.watsonplatform.net`
 * `https://gateway-a.watsonplatform.net`
+* `https://api.us-south.discovery.watson.cloud.ibm.com`
+* `https://api.us-south.tone-analyzer.watson.cloud.ibm.com`
+* `https://iam.cloud.ibm.com`
 
-> Adding the `https://gateway.watsonplatform.net` remote site.
+Here is an example of adding a remote site.
 
 ![](images/sf-remote-site2.png)
 
-> Adding the `https://gateway-a.watsonplatform.net` remote site.
-
-![](images/sf-remote-site1.png)
-
-Now that we have allowed remote calls to the Watson APIs and deployed the Watson Salesforce SDK we are ready to start making calls!
+Once all remote sites are added we are ready to start making API calls!
 
 ## Using the Watson Salesforce SDK
 
@@ -150,20 +149,27 @@ The code block below does the following: 1) It creates a new Watson Discovery ob
 
 
 ```java
-IBMDiscoveryV1 discovery = new IBMDiscoveryV1(IBMDiscoveryV1.VERSION_DATE_2017_09_01);
-String username = '6f7be0c0-xxxxxxxxxx-1d5e9eb4050c';
-String password = 'xxxxxxxxxx';
-String url = 'https://gateway.watsonplatform.net/discovery/api';
-discovery.setUsernameAndPassword(username, password);
-discovery.setEndPoint(url);
-IBMDiscoveryV1Models.QueryOptions options 
+IBMWatsonAuthenticator authenticator = new IBMWatsonIAMAuthenticator('msOrPGdhQxxxxxxxxxx4W2q74');
+IBMDiscoveryV1 discovery = new IBMDiscoveryV1('2019-04-30', authenticator);
+
+// configuring options for listing environments
+IBMDiscoveryV1Models.ListEnvironmentsOptions options =
+  new IBMDiscoveryV1Models.ListEnvironmentsOptionsBuilder()
+    .build();
+
+// list discovery environments
+IBMDiscoveryV1Models.ListEnvironmentsResponse environmentList = discovery.listEnvironments(options);
+System.debug(environmentList);
+
+// query about IBM in the discovery news data set
+IBMDiscoveryV1Models.QueryOptions query_options 
   = new IBMDiscoveryV1Models.QueryOptionsBuilder()
     .environmentId('system')
     .collectionId('news')
     .naturalLanguageQuery('IBM')
     .count(5)
     .build();
-IBMDiscoveryV1Models.QueryResponse response = discovery.query(options);
+IBMDiscoveryV1Models.QueryResponse response = discovery.query(query_options);
 System.debug(response);
 ```
 
@@ -182,14 +188,12 @@ Now we'll make a simple Watson Visual Recognition call using an image available 
 The code block below is similar to our Watson Discovery example with a few minor changes. It does the following: 1) It creates a new Watson Visual Recognition object. 2) It updates said object with the specified `api_key` value. 3) It makes a call to the Watson Visual Recognition service using an image of an apple. And 4) it logs the response as a debug content.
 
 ```java
-String service_url = 'https://gateway-a.watsonplatform.net/visual-recognition/api/';
-String api_key = '76150a9f51a4a3fxxxxxxxxxx77a05b08246e9f';
-IBMVisualRecognitionV3 visualRecognition = new IBMVisualRecognitionV3(IBMVisualRecognitionV3.VERSION_DATE_2016_05_20, api_key);
-visualRecognition.setEndPoint(service_url);
-visualRecognition.setApiKey(api_key);
-String parameters = '{"url":"https://upload.wikimedia.org/wikipedia/commons/f/f4/Honeycrisp.jpg"}';
+IBMWatsonAuthenticator authenticator = new IBMWatsonIAMAuthenticator('pS0nVDCqwU8NoQgZxRfyJclzKFYOTJmgm35L43FWEuhO');
+IBMVisualRecognitionV3 visualRecognition = new IBMVisualRecognitionV3('2018-03-19', authenticator);
+
+// classify an image, an apple
 IBMVisualRecognitionV3Models.ClassifyOptions options = new IBMVisualRecognitionV3Models.ClassifyOptionsBuilder()
-  .parameters(parameters)
+  .url('https://upload.wikimedia.org/wikipedia/commons/f/f4/Honeycrisp.jpg')
   .build();
 IBMVisualRecognitionV3Models.ClassifiedImages resp = visualRecognition.classify(options);
 System.debug('IBMVisualRecognitionV3FTest.testClassify(): ' + resp);
@@ -210,13 +214,8 @@ Alright, one last example using Watson's Tone Analyzer. Copy the code block belo
 The code block below is similar to our others examples with a few minor changes. It does the following: 1) It creates a new Watson Tone Analyzer object. 2) It updates said object with the specified `username` and `password` values. 3) It makes a call to the Watson Tone Analyzer service using the phrase *We have a better product. We need to do better selling*. And 4) it logs the response as a debug content.
 
 ```java
-String service_url = 'https://gateway.watsonplatform.net/tone-analyzer/api';
-String username = '3baf41e5-xxxxxxxxxx-5eb5e9b5a79b';
-String password = 'xxxxxxxxxx';
-
-IBMToneAnalyzerV3 toneAnalyzer = new IBMToneAnalyzerV3('2017-09-21');
-toneAnalyzer.setEndPoint(service_url);
-toneAnalyzer.setUsernameAndPassword(username, password);
+IBMWatsonAuthenticator authenticator = new IBMWatsonIAMAuthenticator('t_-0vh5GImloucOiZCwCyzte3u4gXnHYV8mPu_72FjW4');
+IBMToneAnalyzerV3 toneAnalyzer = new IBMToneAnalyzerV3('2017-09-21', authenticator);
 
 IBMToneAnalyzerV3Models.ToneOptions options = new IBMToneAnalyzerV3Models.ToneOptionsBuilder()
     .text('We have a better product. We need to do better selling')
