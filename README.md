@@ -106,7 +106,9 @@ Now that our SFDX CLI is set up we can proceed to the next section where we allo
 
 ## Allow remote calls from Salesforce DX
 
-Before we start making API calls to Watson we need to configure one final thing in our Salesforce DX platform. We need to allow remote calls to the Watson API URLs. To do this, we visit the [Remote Site Details](https://na50.lightning.force.com/one/one.app#/setup/SecurityRemoteProxy/home) section of our Salesforce DX platform.
+Before we start making API calls to Watson we need to configure one final thing in our Salesforce DX platform. We need to allow remote calls to the Watson API URLs. To do this, we visit the [Remote Site Details](https://na50.lightning.force.com/one/one.app#/setup/SecurityRemoteProxy/home) section of our Salesforce DX platform. To get there, click on the Gear icon in the top-right corner of your screen.
+From there, click on `setup`. Next, from the left-side bar, go down to `Security`. Click on `Security`
+to expand the menu. From there click on `Remote Site Settings`.
 
 There should be a single entry for making calls to the `ApexDevNet` URL `http://www.apexdevnet.com`. We will add to this list by adding two URLs that are specific to Watson APIs. Below is the completed image and for completeness we will show screenshots of the details for both entries.
 
@@ -184,7 +186,10 @@ To keep ourselves honest we made the same call with the tooling available on IBM
 
 ![](images/watson-disco-results.png)
 
-### Watson Visual Recognition
+### Watson Visual Recognition (Deprecated)
+
+> **Note: Watson Visual Recognition is discontinued. Existing instances are supported until 1 December 2021, but as of 7 January 2021, you can't create instances. Any instance that is provisioned on 1 December 2021 will be deleted. Please view the [Maximo Visual Inspection trial](https://www.ibm.com/support/pages/ibm-maximo-visual-inspection) as a way 
+to get started with image classification.
 
 Now we'll make a simple Watson Visual Recognition call using an image available online. Copy the following code block into the Apex editor and update the `api_key` variable with the value from your own provisioned Watson Visual Recognition service and execute the code.
 
